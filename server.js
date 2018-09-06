@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 var table = [
     {
     routeName: "table1",
-    name: "table1",
+    name: "Masala",
     role: "curry",
     age: 900,
     forcePoints: 2000
@@ -25,7 +25,7 @@ var table = [
     var waitingList = [
     {
     routeName: "table2",
-    name: "Darth Maul",
+    name: "Pho",
     role: "soup",
     age: 200,
     forcePoints: 1200
@@ -62,10 +62,10 @@ var table = [
     app.post("/api/table", function(req, res) {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body-parser middleware
-    var newresivation = req.body;
+    var newreservation = req.body;
     // Using a RegEx Pattern to remove spaces from newCharacter
     // You can read more about RegEx Patterns later [https://www.regexbuddy.com/regex.html](https://www.regexbuddy.com/regex.html)
-    newresivation.routeName = newresivation.name.replace(/\s+/g, "").toLowerCase();
+    newreservation.routeName = newreservation.name.replace(/\s+/g, "").toLowerCase();
     
     console.log(newresivation);
     
@@ -73,8 +73,22 @@ var table = [
     
     res.json(newresivation);
     });
+
+    //MODULE
+
+
+    //ROUTER
+    
+    module.exports + function(app) {
+      //HTML
+
+    }
+    
+    
+    
     // Starts the server to begin listening
     // =============================================================
     app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
     });
+
